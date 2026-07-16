@@ -6,7 +6,7 @@ COLOR disccolor%
 PRINT "205     270     335     400     465     530     595"
 Getinput: LOCATE 1, 1
 INPUT column%         ' This is experimental code
-IF column% < 205 OR column% > 595 OR (column% - 140) MOD 65 THEN GOTO skip
+IF (column% - 140) MOD 65 OR column% < 205 OR column% > 595 THEN GOTO skip
 IF POINT(column%, 32) THEN GOTO Getinput
  FOR row% = 357 TO 32 STEP -65
   IF POINT(column%, row%) = 0 THEN
