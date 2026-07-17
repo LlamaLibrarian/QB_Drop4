@@ -15,6 +15,7 @@ column(4) = 385
 column(5) = 385
 column(6) = 385
 column(7) = 385
+CLS
 ShowStatus: LOCATE 28, 27
 IF disccolor% = 2 THEN disccolor% = 4 ELSE disccolor% = 2
 COLOR disccolor%
@@ -28,8 +29,5 @@ IF (j% >= 1) AND (j% <= 7) THEN
  column(j%) = column(j%) - 65
  GOTO ShowStatus
 END IF
-IF j% >= 1000 THEN
- CLS
- GOTO NewGame
-END IF
+IF j% >= 1000 THEN GOTO NewGame
 IF j% >= 0 THEN GOTO GetInput
