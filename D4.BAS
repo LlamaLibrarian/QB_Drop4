@@ -16,7 +16,7 @@ column(5) = 385
 column(6) = 385
 column(7) = 385
 CLS
-ShowStatus: LOCATE 28, 27
+FlipColor: LOCATE 28, 27
 IF disccolor% = 2 THEN disccolor% = 4 ELSE disccolor% = 2
 COLOR disccolor%
 PRINT "1       2       3       4       5       6       7", moves$;
@@ -27,7 +27,7 @@ IF (j% >= 1) AND (j% <= 7) THEN
  moves$ = moves$ + CHR$(j% + 48)
  CIRCLE (row(j%), column(j%)), 28
  column(j%) = column(j%) - 65
- GOTO ShowStatus
+ GOTO FlipColor
 END IF
 IF j% >= 1000 THEN GOTO NewGame
 IF j% >= 0 THEN GOTO GetInput
