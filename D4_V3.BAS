@@ -9,10 +9,10 @@ INPUT column%                 ' This is experimental code
 IF column% >= 10000 THEN GOTO Newgame
 IF (column% - 140) MOD 65 OR column% < 205 OR column% > 595 THEN GOTO Checkgameover
 IF POINT(column%, 32) THEN GOTO Getinput
- FOR row% = 357 TO 32 STEP -65
-  IF POINT(column%, row%) = 0 THEN
-   CIRCLE (column%, row% + 28), 28
-   GOTO Flipcolor
-  END IF
- NEXT
+FOR row% = 357 TO 32 STEP -65
+ IF POINT(column%, row%) = 0 THEN
+  CIRCLE (column%, row% + 28), 28
+  GOTO Flipcolor
+ END IF
+NEXT
 Checkgameover: IF column% >= 0 THEN GOTO Getinput
