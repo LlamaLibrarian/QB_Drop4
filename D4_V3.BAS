@@ -8,7 +8,7 @@ Getinput: LOCATE 1, 1
 INPUT col%                 ' This is experimental code
 IF col% >= 10000 THEN GOTO Newgame
 IF col% < 0 THEN END
-IF (col% - 140) MOD 65 OR col% < 205 OR col% > 595 THEN GOTO Getinput
+IF (col% - 10) MOD 65 OR col% < 205 OR col% > 595 THEN GOTO Getinput
 IF POINT(col%, 32) THEN GOTO Getinput
 FOR row% = 357 TO 32 STEP -65
  IF POINT(col%, row%) = 0 THEN
