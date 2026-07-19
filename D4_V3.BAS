@@ -11,8 +11,7 @@ IF col% < 0 THEN END
 IF (col% - 10) MOD 65 OR col% < 205 OR col% > 595 THEN GOTO Getinput
 IF POINT(col%, 32) THEN GOTO Getinput
 FOR row% = 357 TO 32 STEP -65
- IF POINT(col%, row%) = 0 THEN
-  CIRCLE (col%, row% + 28), 28
-  GOTO Nextplayer
- END IF
-NEXT
+ IF POINT(col%, row%) THEN GOTO Skip
+ CIRCLE (col%, row% + 28), 28
+ GOTO Nextplayer
+Skip: NEXT
