@@ -1,6 +1,6 @@
 SCREEN 12
 Newgame: CLS
-Nextplayer: LOCATE 28, 26
+Flipcolor: LOCATE 28, 26
 IF disccolor% = 2 THEN disccolor% = 4 ELSE disccolor% = 2
 COLOR disccolor%
 PRINT "205     270     335     400     465     530     595"
@@ -13,5 +13,5 @@ IF POINT(col%, 32) THEN GOTO Getinput
 FOR row% = 357 TO 32 STEP -65
  IF POINT(col%, row%) THEN GOTO Nextrow
  CIRCLE (col%, row% + 28), 28
- GOTO Nextplayer
+ GOTO Flipcolor
 Nextrow: NEXT
