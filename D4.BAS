@@ -1,4 +1,4 @@
-DIM row(1 TO 7) AS INTEGER, column(1 TO 7) AS INTEGER
+NewGame: DIM row(1 TO 7) AS INTEGER, column(1 TO 7) AS INTEGER
 row(1) = 205
 row(2) = 270
 row(3) = 335
@@ -7,7 +7,7 @@ row(5) = 465
 row(6) = 530
 row(7) = 595
 SCREEN 12
-NewGame: moves$ = "Moves= "
+moves$ = "Moves= "
 column(1) = 385
 column(2) = 385
 column(3) = 385
