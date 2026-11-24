@@ -5,7 +5,7 @@ IF disccolor% = 2 THEN disccolor% = 4 ELSE disccolor% = 2
 COLOR disccolor%
 PRINT "195     260     325     390     455     520     585"
 Getinput: LOCATE 1, 1
-INPUT col%                 ' This is experimental code
+INPUT col%
 IF col% >= 10000 THEN GOTO Newgame
 IF col% < 0 THEN END
 IF col% MOD 65 OR col% < 195 OR col% > 585 THEN GOTO Getinput
