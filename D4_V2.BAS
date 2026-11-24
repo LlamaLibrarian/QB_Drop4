@@ -1,5 +1,5 @@
-SCREEN 12
-Newgame: CLS
+Newgame: SCREEN 12
+CLS
 Flipcolor: LOCATE 28, 25
 IF disccolor% = 2 THEN disccolor% = 4 ELSE disccolor% = 2
 COLOR disccolor%
